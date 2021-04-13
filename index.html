@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOR DE MARIA</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        background: #1f242d;
+
+    }
+
+    h1 {
+        margin: auto;
+        padding-top: 12px;
+        color: #fff;
+    }
+
+    h3 {
+        margin-top: 100px;
+        color: #fff;
+    }
+
+    .padre {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hijo {
+        width: 100%;
+        height: 60%;
+    }
+
+    #si {
+        left: 30%;
+        transform: translateY(40%) translateX(-20%);
+    }
+
+    #no {
+        left: 70%;
+        transform: translateY(40%) translateX(-80%);
+    }
+
+    @media (max-width: 720px) {
+        #si {
+            left: 25%;
+            transform: translateY(40%) translateX(-20%);
+        }
+
+        #no {
+            left: 75%;
+            transform: translateY(40%) translateX(-80%);
+        }
+    }
+
+    @media (max-width: 570px) {
+        #no {
+            left: 80%;
+            transform: translateY(140%) translateX(-80%);
+        }
+
+        #si {
+            left: 20%;
+            transform: translateY(140%) translateX(-20%);
+        }
+    }
+
+    /* botones */
+    a {
+        position: absolute;
+        display: inline-block;
+        padding: 10px 30px;
+        top: 50%;
+        text-decoration: none;
+        text-transform: uppercase;
+        transform: translate(-50%);
+        color: rgba(255, 255, 255, 0.4);
+        background: #262c37;
+        letter-spacing: 2px;
+        font-size: 2em;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    a span {
+        display: block;
+        position: absolute;
+        background: #2894ff;
+    }
+
+    /*lado Izquierdo*/
+    a span:nth-child(1) {
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+    }
+
+    a:hover span:nth-child(1) {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+    }
+
+    /*lado central abajo*/
+    a span:nth-child(2) {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+    }
+
+    a:hover span:nth-child(2) {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+
+    /*lado derecho*/
+    a span:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    a:hover span:nth-child(3) {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    /*lado central arriba*/
+    a span:nth-child(4) {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    a:hover span:nth-child(4) {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    /* particles */
+    #particles-js {
+        height: 100%;
+        width: 100%;
+        background: #1f242d;
+        position: fixed;
+        z-index: -1;
+    }
+
+    /* alertify */
+    .alertify .ajs-ok {
+        color: #0099CC;
+        background: transparent;
+        border: 2px solid #0099cc !important;
+        border-radius: 6px;
+        outline: none;
+    }
+
+    .alertify .ajs-ok:hover {
+        background-color: #008CBA;
+        color: #fff;
+    }
+
+    .alertify .ajs-cancel {
+        color: #fff;
+        background: #eb111c;
+        border: 2px solid #af0d0d !important;
+        border-radius: 6px;
+        outline: none;
+    }
+</style>
+
+<body>
+    <!-- particulas js-->
+    <div id="particles-js"></div>
+
+    <div class="padre">
+        <div class="hijo">
+            <h3>MI BELLA FLOR</h3>
+            <h1>¿MI AMOR ,LO SIENTO, ME DISCULPAS?</h1>
+
+            <a href="#" id="si">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                si
+            </a>
+            <a href="#" id="no">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                no
+            </a>
+        </div>
+
+    </div>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+
+<script>
+    let si = document.getElementById('si')
+    si.addEventListener("click", function (e) {
+        alertify.confirm("SABIA QUE ACEPTARIAS CARIÑO",
+            function () {
+                alertify.success('TE AMO MUCHO MI CIELO');
+                setTimeout("location.href='https://www.youtube.com/watch?v=Gng_z60HVAs&list=PLlV7ht5eNlE7Ce0sjHl5sdwHX4gy-JDGf&index=10'", 2000);
+            },
+            function () {
+                alertify.error('Ya no puedes cancelar mi vida, Te Amo mucho ');
+            });
+
+    });
+    let no = document.getElementById('no')
+    no.addEventListener("mousemove", function (e) {
+        let x = Math.round(Math.random() * 93);
+        let y = Math.round(Math.random() * 93);
+        no.style.left = x + "%";
+        no.style.top = y + "%";
+    });
+
+    particlesJS('particles-js',
+
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#2894ff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#2894ff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 300,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 150
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true,
+            "config_demo": {
+                "hide_card": false,
+                "background_color": "#1f242d",
+                "background_image": "",
+                "background_position": "50% 50%",
+                "background_repeat": "no-repeat",
+                "background_size": "cover"
+            }
+        }
+
+    );
+
+</script>
+
+</html>
+<!-- https://github.com/Jeanch78/tesoro.git -->
