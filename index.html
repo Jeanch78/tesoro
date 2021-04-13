@@ -30,6 +30,8 @@
         margin: auto;
         padding-top: 12px;
         color: #fff;
+        margin-top: 40px;
+        font-size: 28px;
     }
 
     h3 {
@@ -47,17 +49,27 @@
     }
 
     .hijo {
-        width: 100%;
+        width: 40%;
         height: 60%;
     }
 
+    .caja {
+        width: 40%;
+        height: 40%;
+        background: rgb(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgb(0, 0, 0, 0.5);
+        border-radius: 1em;
+
+    }
+
     #si {
-        left: 30%;
+        left: 33%;
         transform: translateY(40%) translateX(-20%);
     }
 
     #no {
-        left: 70%;
+        left: 62%;
         transform: translateY(40%) translateX(-80%);
     }
 
@@ -213,6 +225,14 @@
         border-radius: 6px;
         outline: none;
     }
+
+    /* caja */
+    .caja {
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        width: calc(100% - 50px);
+        color: #ffffff;
+
+    }
 </style>
 
 <body>
@@ -221,9 +241,17 @@
 
     <div class="padre">
         <div class="hijo">
-            <h3>MI BELLA FLOR</h3>
-            <h1>¿MI AMOR ,LO SIENTO, ME DISCULPAS?</h1>
 
+            <div class="caja">
+                <h1 style="padding-bottom: 10px;">MI AMOR</h1>
+                <p>Eres tú mi gran amor, mi ilusión, mi sueño hecho
+                    realidad. Gracias por quererme, por dedicarme tu tiempo,
+                    por darme un espacio dentro de tu corazón. Gracias por hacerme sentir tan feliz
+                    y tan especial cuando estoy contigo, Eres ese instante que dura toda una eternidad en mi alma, Amor
+                    nada ni nadie ni la distacia rompera este amor tan grande que siento por ti</p>
+                <br>
+                <p>Te invito a formar parte de mi vida ¿ACEPTAS?</p>
+            </div>
             <a href="#" id="si">
                 <span></span>
                 <span></span>
@@ -239,7 +267,6 @@
                 no
             </a>
         </div>
-
     </div>
 
 </body>
@@ -249,13 +276,18 @@
 <script>
     let si = document.getElementById('si')
     si.addEventListener("click", function (e) {
-        alertify.confirm("SABIA QUE ACEPTARIAS CARIÑO",
+        alertify.confirm("SABIA QUE ACEPTARIAS CARIÑO <br>Te quiero mucho <br>y no quisiera estar peleado con tigo",
             function () {
-                alertify.success('TE AMO MUCHO MI CIELO');
-                setTimeout("location.href='https://www.youtube.com/watch?v=Gng_z60HVAs&list=PLlV7ht5eNlE7Ce0sjHl5sdwHX4gy-JDGf&index=10'", 2000);
+                alertify.success('TE AMO MI CIELO');
+                alertify.success('Gracias por llegar a mi vida');
+                alertify.success('mi Bella FLOR DE MARIA');
+                alertify.success('TE AMO');
+                setTimeout("location.href='https://www.youtube.com/watch?v=Gng_z60HVAs&list=PLlV7ht5eNlE7Ce0sjHl5sdwHX4gy-JDGf&index=10'", 6500);
+
+
             },
             function () {
-                alertify.error('Ya no puedes cancelar mi vida, Te Amo mucho ');
+                alertify.error('Ya no puedes cancelar cielo, Te Amo mucho y se que no estas muy molesta conmigo');
             });
 
     });
@@ -391,4 +423,6 @@
 </script>
 
 </html>
-<!-- https://github.com/Jeanch78/tesoro.git -->
+<!-- 
+    amor es para ty lo hice toda la mañana espero te guste
+ -->
