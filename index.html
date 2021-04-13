@@ -34,11 +34,6 @@
         font-size: 28px;
     }
 
-    h3 {
-        margin-top: 100px;
-        color: #fff;
-    }
-
     .padre {
         height: 100vh;
         width: 100vw;
@@ -73,28 +68,121 @@
         transform: translateY(40%) translateX(-80%);
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 1025px) {
         #si {
-            left: 25%;
+            left: 33%;
             transform: translateY(40%) translateX(-20%);
         }
 
         #no {
-            left: 75%;
+            left: 62%;
             transform: translateY(40%) translateX(-80%);
+        }
+
+        .hijo {
+            width: 60%;
+            height: 60%;
+        }
+
+        .caja {
+            width: 50%;
+            height: 40%;
+            padding: 0px 15px;
+            background: rgb(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgb(0, 0, 0, 0.5);
+            border-radius: 1em;
+
         }
     }
 
-    @media (max-width: 570px) {
+    @media (max-width: 720px) {
+        #si {
+            left: 25%;
+            transform: translateY(250%) translateX(-20%);
+        }
+
         #no {
-            left: 80%;
-            transform: translateY(140%) translateX(-80%);
+            left: 75%;
+            transform: translateY(250%) translateX(-80%);
+        }
+
+        .hijo {
+            width: 80%;
+            height: 30%;
+        }
+
+        .caja {
+            width: 100%;
+            height: 80%;
+            padding: 0px 15px;
+            background: rgb(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgb(0, 0, 0, 0.5);
+            border-radius: 1em;
+
+        }
+    }
+
+    @media (max-width: 550px) {
+        #no {
+            left: 74%;
+            transform: translateY(270%) translateX(-80%);
         }
 
         #si {
-            left: 20%;
-            transform: translateY(140%) translateX(-20%);
+            left: 18%;
+            transform: translateY(270%) translateX(-20%);
         }
+
+        .hijo {
+            width: 90%;
+            height: auto;
+        }
+
+        .caja {
+            width: 90%;
+            height: 80%;
+            background: rgb(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgb(0, 0, 0, 0.5);
+            border-radius: 1em;
+
+        }
+    }
+    @media (max-width: 470px) {
+        #no {
+            left: 74%;
+            transform: translateY(280%) translateX(-80%);
+        }
+
+        #si {
+            left: 18%;
+            transform: translateY(280%) translateX(-20%);
+        }
+
+        .hijo {
+            width: auto;
+            height: auto;
+        }
+
+        .caja {
+            width: 90%;
+            height: 80%;
+            background: rgb(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgb(0, 0, 0, 0.5);
+            border-radius: 1em;
+
+        }
+        
+    h1 {
+        margin: auto;
+        padding-top: 12px;
+        color: #fff;
+        margin-top: 10px;
+        font-size: 28px;
+    }
     }
 
     /* botones */
@@ -248,7 +336,7 @@
                     realidad. Gracias por quererme, por dedicarme tu tiempo,
                     por darme un espacio dentro de tu corazón. Gracias por hacerme sentir tan feliz
                     y tan especial cuando estoy contigo, Eres ese instante que dura toda una eternidad en mi alma, Amor
-                    nada ni nadie ni la distacia rompera este amor tan grande que siento por ti.</p>
+                    nada ni nadie ni la distacia rompera este amor tan grande que siento por ti</p>
                 <br>
                 <p>Te invito a formar parte de mi vida ¿ACEPTAS?</p>
             </div>
